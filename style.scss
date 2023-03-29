@@ -1,0 +1,161 @@
+:root {
+  --primary: #e5e5e5;
+  --secondary: #22b27b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Golos Text", sans-serif;
+  font-size: 24rem;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  color: black;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 0.9;
+  text-align: center;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+h1::before {
+  content: url(/images/happe-logo.svg);
+  display: inline-block;
+  height: 4rem;
+  aspect-ratio: 1;
+  fill: var(--secondary);
+}
+
+h2 {
+  font-family: "Gloock", serif;
+  color: var(--secondary);
+  line-height: 1.2;
+}
+
+p {
+  font-family: "Gloock", serif;
+  font-size: 2.8rem;
+  line-break: auto;
+}
+
+p,
+a {
+  line-height: 1.5;
+  margin-bottom: 1.4rem;
+}
+
+a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+
+  &::after {
+    content: "";
+    display: block;
+    border-bottom: #fff solid 2px;
+    width: 100%;
+    transition: transform 0.2s ease-in-out;
+    transform: scale(0, 1);
+  }
+
+  &:hover::after {
+    transform: scale(1, 1);
+  }
+}
+
+.sml {
+  font-family: "Golos Text", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin-bottom: 4rem;
+}
+
+.intro {
+  background: linear-gradient(from top, var(--primary), #fff);
+  position: relative;
+}
+
+.headline {
+  min-height: 85vh;
+  padding: 2rem 8rem;
+}
+
+.contact {
+  background: var(--secondary);
+  padding-top: 8rem;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  padding-bottom: 8rem;
+
+  color: #fff;
+  clip-path: polygon(50% 30px, 100% 0, 100% 100%, 0 100%, 0 0);
+}
+
+.ppl {
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  .ppl {
+    display: block;
+    position: absolute;
+    z-index: -2;
+    aspect-ratio: 1;
+  }
+
+  .blue {
+    top: clamp(5%, 20vw, 20%);
+    left: clamp(2%, 20vw, 5%);
+    width: 200px;
+    transform: rotate(-10deg);
+  }
+
+  .green {
+    top: clamp(2%, 20vw, 10%);
+    right: clamp(2%, 2vw, 10%);
+    width: 250px;
+    transform: rotate(20deg);
+  }
+
+  .orange {
+    bottom: -5%;
+    left: clamp(10%, 20vw, 20%);
+    width: 220px;
+    z-index: 10;
+  }
+}
+
+.align_center {
+  text-align: center;
+}
+
+.flex_center {
+  width: 80%;
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact {
+  width: 100%;
+}
